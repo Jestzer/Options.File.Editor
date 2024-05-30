@@ -73,7 +73,8 @@
 				Margin="80,0,0,5"
 				VerticalAlignment="Bottom"
 				Width="135"
-				Foreground="White">
+				Foreground="White"
+				Click="CheckForUpdateButton_Click">
 			<Button.Styles>
 				<Style Selector="Button">
 					<Setter Property="Background" Value="#FF464646"/>

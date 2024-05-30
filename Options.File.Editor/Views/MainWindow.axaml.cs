@@ -51,6 +51,13 @@ public partial class MainWindow : Window
         }
     }
 
+    private async void CheckForUpdateButton_Click(object sender, RoutedEventArgs e)
+    {
+        var updateWindow = new UpdateWindow();
+
+        await updateWindow.ShowDialog(this); // Putting this here, otherwise it won't center it on the MainWindow. Sorryyyyy.
+    }
+
     private async void OptionsFileBrowseButton_Click(object sender, RoutedEventArgs e)
     {
         if (Application.Current?.ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop && desktop.MainWindow != null)
