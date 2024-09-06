@@ -6,7 +6,7 @@
         xmlns:views="clr-namespace:Options.File.Editor.Views"
         mc:Ignorable="d" d:DesignWidth="900" d:DesignHeight="550"
 		Width="900" Height="550"
-        MinWidth="800" MinHeight="450"
+        MinWidth="900" MinHeight="550"
         x:Class="Options.File.Editor.Views.MainWindow"
 		x:DataType="vm:MainViewModel"
         Icon="/Assets/avalonia-logo.ico"
@@ -90,8 +90,14 @@
 				</Style>
 			</Button.Styles>
 		</Button>
-		<ListBox Grid.Row="0" Margin="400,10,10,10" VerticalAlignment="Stretch">
-			<!-- ListBox contents here, for example, binding ItemsSource -->
+		<ListBox Grid.Row="0" Margin="20,20,600,350" VerticalAlignment="Stretch"
+		Background="#FF2D2B2B" BorderBrush="Black" BorderThickness="2" Foreground="White" SelectedItem="{Binding SelectedFirstItem, Mode=TwoWay}">
+			    <ListBoxItem Content="Item 1"/>
+    			<ListBoxItem Content="Item 2"/>
+   				<ListBoxItem Content="Item 3"/>
+		</ListBox>
+		<ListBox Grid.Row="0" Margin="310,20,270,350" VerticalAlignment="Stretch"
+		Background="#FF2D2B2B" BorderBrush="Black" BorderThickness="2" Foreground="White">	
 		</ListBox>
 		</Grid>
 </Window>
