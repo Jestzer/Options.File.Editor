@@ -90,14 +90,31 @@
 				</Style>
 			</Button.Styles>
 		</Button>
-		<ListBox Grid.Row="0" Margin="20,20,600,350" VerticalAlignment="Stretch"
-		Background="#FF2D2B2B" BorderBrush="Black" BorderThickness="2" Foreground="White" SelectedItem="{Binding SelectedFirstItem, Mode=TwoWay}">
-			    <ListBoxItem Content="Item 1"/>
-    			<ListBoxItem Content="Item 2"/>
-   				<ListBoxItem Content="Item 3"/>
-		</ListBox>
-		<ListBox Grid.Row="0" Margin="310,20,270,350" VerticalAlignment="Stretch"
-		Background="#FF2D2B2B" BorderBrush="Black" BorderThickness="2" Foreground="White">	
-		</ListBox>
+		<TreeView Name="treeView" Grid.Row="0" Margin="20,20,600,350" VerticalAlignment="Stretch"
+          Background="#FF2D2B2B" BorderBrush="Black" BorderThickness="2" Foreground="White">
+    <TreeViewItem Header="Users">
+        <TreeViewItem.ContextMenu>
+            <ContextMenu>
+                <MenuItem Header="Add Sub-Item" Click="OnAddSubItemClick"/>
+            </ContextMenu>
+        </TreeViewItem.ContextMenu>
+    </TreeViewItem>
+    
+    <TreeViewItem Header="Groups">
+        <TreeViewItem.ContextMenu>
+            <ContextMenu>
+                <MenuItem Header="Add Sub-Item" Click="OnAddSubItemClick"/>
+            </ContextMenu>
+        </TreeViewItem.ContextMenu>
+    </TreeViewItem>
+    
+    <TreeViewItem Header="Host Groups">
+        <TreeViewItem.ContextMenu>
+            <ContextMenu>
+                <MenuItem Header="Add Sub-Item" Click="OnAddSubItemClick"/>
+            </ContextMenu>
+        </TreeViewItem.ContextMenu>
+    </TreeViewItem>
+</TreeView>
 		</Grid>
 </Window>

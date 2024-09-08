@@ -58,6 +58,16 @@ public partial class MainWindow : Window
         await updateWindow.ShowDialog(this); // Putting this here, otherwise it won't center it on the MainWindow. Sorryyyyy.
     }
 
+    private void OnAddSubItemClick(object sender, RoutedEventArgs e)
+    {
+        if (treeView.SelectedItem is TreeViewItem selectedItem)
+        {
+            var newItem = new TreeViewItem { Header = "New Sub-Item" };
+            selectedItem.Items.Add(newItem);
+            selectedItem.IsExpanded = true; // Expand the parent to show the new sub-item
+        }
+    }
+
     private async void OptionsFileBrowseButton_Click(object sender, RoutedEventArgs e)
     {
         if (Application.Current?.ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop && desktop.MainWindow != null)
